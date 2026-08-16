@@ -38,6 +38,7 @@
     --color-violet-600: oklch(54.1% 0.281 293.009);
     --color-violet-900: oklch(38% 0.189 293.745);
     --color-purple-300: oklch(82.7% 0.119 306.383);
+    --color-purple-400: oklch(71.4% 0.203 305.504);
     --color-purple-700: oklch(49.6% 0.265 301.924);
     --color-pink-100: oklch(94.8% 0.028 342.258);
     --color-pink-200: oklch(89.9% 0.061 343.231);
@@ -47,6 +48,10 @@
     --color-pink-600: oklch(59.2% 0.249 0.584);
     --color-pink-700: oklch(52.5% 0.223 3.958);
     --color-pink-800: oklch(45.9% 0.187 3.815);
+    --color-slate-300: oklch(86.9% 0.022 252.894);
+    --color-slate-400: oklch(70.4% 0.04 256.788);
+    --color-slate-700: oklch(37.2% 0.044 257.287);
+    --color-slate-800: oklch(27.9% 0.041 260.031);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-400: oklch(70.7% 0.022 261.325);
     --color-gray-500: oklch(55.1% 0.027 264.364);
@@ -297,11 +302,17 @@
       max-width: 96rem;
     }
   }
+  .-m-40 {
+    margin: calc(var(--spacing) * -40);
+  }
   .m-10 {
     margin: calc(var(--spacing) * 10);
   }
   .m-20 {
     margin: calc(var(--spacing) * 20);
+  }
+  .m-28 {
+    margin: calc(var(--spacing) * 28);
   }
   .m-40 {
     margin: calc(var(--spacing) * 40);
@@ -318,6 +329,9 @@
   .mx-0 {
     margin-inline: 0px;
   }
+  .mx-40 {
+    margin-inline: calc(var(--spacing) * 40);
+  }
   .mx-80 {
     margin-inline: calc(var(--spacing) * 80);
   }
@@ -333,8 +347,14 @@
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
+  .mt-5 {
+    margin-top: calc(var(--spacing) * 5);
+  }
   .mt-10 {
     margin-top: calc(var(--spacing) * 10);
+  }
+  .mt-20 {
+    margin-top: calc(var(--spacing) * 20);
   }
   .mt-40 {
     margin-top: calc(var(--spacing) * 40);
@@ -351,6 +371,18 @@
   .mb-80 {
     margin-bottom: calc(var(--spacing) * 80);
   }
+  .ml-1 {
+    margin-left: var(--spacing);
+  }
+  .ml-2 {
+    margin-left: calc(var(--spacing) * 2);
+  }
+  .ml-3 {
+    margin-left: calc(var(--spacing) * 3);
+  }
+  .ml-10 {
+    margin-left: calc(var(--spacing) * 10);
+  }
   .ml-40 {
     margin-left: calc(var(--spacing) * 40);
   }
@@ -365,6 +397,14 @@
   }
   .table {
     display: table;
+  }
+  .size-12 {
+    width: calc(var(--spacing) * 12);
+    height: calc(var(--spacing) * 12);
+  }
+  .size-28 {
+    width: calc(var(--spacing) * 28);
+    height: calc(var(--spacing) * 28);
   }
   .size-30 {
     width: calc(var(--spacing) * 30);
@@ -405,6 +445,9 @@
   .h-5 {
     height: calc(var(--spacing) * 5);
   }
+  .h-40 {
+    height: calc(var(--spacing) * 40);
+  }
   .h-96 {
     height: calc(var(--spacing) * 96);
   }
@@ -423,6 +466,9 @@
   .min-h-screen {
     min-height: 100vh;
   }
+  .w-40 {
+    width: calc(var(--spacing) * 40);
+  }
   .w-60 {
     width: calc(var(--spacing) * 60);
   }
@@ -434,6 +480,12 @@
   }
   .w-250 {
     width: calc(var(--spacing) * 250);
+  }
+  .flex-1 {
+    flex: 1;
+  }
+  .flex-2 {
+    flex: 2;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -514,8 +566,18 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-8 {
+    border-style: var(--tw-border-style);
+    border-width: 8px;
+  }
   .border-red-800 {
     border-color: var(--color-red-800);
+  }
+  .border-slate-300 {
+    border-color: var(--color-slate-300);
+  }
+  .border-slate-400 {
+    border-color: var(--color-slate-400);
   }
   .bg-amber-500 {
     background-color: var(--color-amber-500);
@@ -595,6 +657,9 @@
   .bg-purple-300 {
     background-color: var(--color-purple-300);
   }
+  .bg-purple-400 {
+    background-color: var(--color-purple-400);
+  }
   .bg-purple-700 {
     background-color: var(--color-purple-700);
   }
@@ -643,11 +708,17 @@
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
   .p-5 {
     padding: calc(var(--spacing) * 5);
+  }
+  .p-10 {
+    padding: calc(var(--spacing) * 10);
   }
   .p-20 {
     padding: calc(var(--spacing) * 20);
@@ -868,6 +939,20 @@
   @media (width >= 64rem) {
     .lg\:bg-red-950 {
       background-color: var(--color-red-950);
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    .dark\:bg-black {
+      background-color: var(--color-black);
+    }
+    .dark\:bg-slate-700 {
+      background-color: var(--color-slate-700);
+    }
+    .dark\:bg-slate-800 {
+      background-color: var(--color-slate-800);
+    }
+    .dark\:text-white {
+      color: var(--color-white);
     }
   }
   .\[\&\>\*\]\:p-4 > * {
