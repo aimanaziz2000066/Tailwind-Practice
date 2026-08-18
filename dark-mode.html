@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Dark Mode in Tailwind CSS</title>
@@ -15,5 +15,39 @@
         </div>
         <p class="text-7xl mt-10 ml-10 mt-5 dark:text-white">Box with Dark Mode</p>
     </div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Dark Mode</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body id="body" class="bg-white">
+
+    <div class="text-center mt-20">
+        <h1 class="text-5xl font-bold text-pink-800 text-8xl">
+            Hello Coders
+        </h1>
+
+        <button 
+            onclick="toggleDarkMode()"
+            class="mt-10 bg-black text-white text-6xl px-10 py-5 p-10 m-12 rounded-lg">
+            Dark Mode
+        </button>
+    </div>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("bg-black");
+            document.body.classList.toggle("bg-white");
+
+            document.getElementById("heading").classList.toggle("text-white");
+            document.getElementById("heading").classList.toggle("text-black");
+        }
+    </script>
+
 </body>
 </html>
