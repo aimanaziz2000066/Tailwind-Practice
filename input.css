@@ -20,3 +20,12 @@
     --padding-28:300px;
     --padding-wrapper:10px;
 } */
+
+.custom-container{
+    @apply bg-green-300 text-8xl p-12 m-10 hover:bg-green-500
+}
+@media screen(lg) {
+    body{
+        @apply bg-pink-700
+    }
+}
